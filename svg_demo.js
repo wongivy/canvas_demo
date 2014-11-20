@@ -11,9 +11,22 @@ $(document).ready(function(){
 
   //drawing
 
+  var rect = paper.rect(50, 60, 100, 200)
+      .attr({
+        'fill' : PURPLE,
+        'stroke' : GOLD,
+        'stroke-width' : 4
+      }
+  );
 
-
-
+  rect.click(function() {
+    rect.animate(
+        {
+          'fill' : GOLD,
+          'stroke' : PURPLE
+        }, 1000
+    )
+  });
 
 
 
